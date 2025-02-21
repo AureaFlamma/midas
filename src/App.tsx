@@ -1,12 +1,17 @@
 import "./App.css";
 import { Button, HStack } from "@chakra-ui/react"
+import { ColorModeButton } from "@/components/ui/color-mode"
+import AssetInput from "./components/custom/assetInput";
+
 
 function App() {
   return (
+  <div>
     <HStack>
-      <Button>Click me</Button>
-      <Button>Click me</Button>
+      <AssetInput/>
+      <ColorModeButton />
     </HStack>
+  </div>
   )
 }
 
