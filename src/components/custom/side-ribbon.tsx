@@ -10,6 +10,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { PiCoinVerticalBold } from "react-icons/pi";
+import PriceInput from "./price-input";
+import CoinTypeInput from "./coin-type-input";
 
 const SideRibbon = () => (
   <Box h="100vh" p="2" color="white" borderRight="1px solid #7D7D7D">
@@ -21,15 +23,15 @@ const SideRibbon = () => (
         </Button>
       </DialogTrigger>
         <DialogContent>
-        <DialogHeader>
-                <DialogTitle>Dialog Title</DialogTitle>
-              </DialogHeader>
-              <DialogBody>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </DialogBody>
+          <DialogHeader>
+            <DialogTitle>New coin</DialogTitle>
+          </DialogHeader>
+          <DialogBody gap="0">
+            <HStack>
+              <CoinTypeInput />
+              <PriceInput />
+            </HStack>
+          </DialogBody>
         </DialogContent>
     </DialogRoot>
   </VStack>
