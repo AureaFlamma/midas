@@ -20,13 +20,14 @@ const coinTypes = createListCollection({
   ],
 })
 
+// ToDo: Remove helpertext and find a way to align it without this hack
 
-const AssetInput = () => {
+const CoinTypeInput = () => {
   return (
     <Fieldset.Root>
       <Fieldset.Content>
         <HStack>
-        <Field label="Coin Type">
+        <Field label="Coin Type" helperText="Select the type of coin you are adding">
         <SelectRoot collection={coinTypes}>
             <SelectTrigger>
               <SelectValueText />
@@ -44,8 +45,9 @@ const AssetInput = () => {
         </Field>
         </HStack>
       </Fieldset.Content>
+      
     </Fieldset.Root>
   )
 }
 
-export default AssetInput
+export default CoinTypeInput
