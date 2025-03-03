@@ -12,6 +12,7 @@ import {
 import { PiCoinVerticalBold } from "react-icons/pi";
 import PriceInput from "./price-input";
 import CoinTypeInput from "./coin-type-input";
+import YearInput from "./year-input";
 
 const SideRibbon = () => (
   <Box h="100vh" p="2" color="white" borderRight="1px solid #7D7D7D">
@@ -30,6 +31,7 @@ const SideRibbon = () => (
             <HStack>
               <CoinTypeInput />
               <PriceInput />
+              <YearInput />
             </HStack>
           </DialogBody>
         </DialogContent>
