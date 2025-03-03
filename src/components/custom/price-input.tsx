@@ -19,7 +19,8 @@ const PriceInput = () => {
             maximumFractionDigits: 2,
           }}
         >
-          <NumberInputField />
+          <NumberInputField 
+          />
         </NumberInputRoot>
       <Field.HelperText>Enter the amount you paid for the coin</Field.HelperText>
     </Field.Root>

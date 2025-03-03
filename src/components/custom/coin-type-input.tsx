@@ -32,7 +32,7 @@ const CoinTypeInput = () => {
             <SelectTrigger>
               <SelectValueText />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent zIndex="popover">
               {
                 coinTypes.items.map((item) => (
                   <SelectItem key={item.value} item={item}>
