@@ -1,4 +1,4 @@
-import { Button, Card, HStack, StackSeparator } from "@chakra-ui/react"
+import { Button, Card, HStack, Icon, StackSeparator } from "@chakra-ui/react"
 import { Badge } from "@chakra-ui/react"
 import { FormatNumber, Stat } from "@chakra-ui/react"
 import { DataList } from "@chakra-ui/react"
@@ -28,9 +28,11 @@ const CoinStatsSeparated = () => {
         <DataList.ItemValue>£234</DataList.ItemValue>
         <DataList.ItemLabel>Change</DataList.ItemLabel>
         <DataList.ItemValue gap={2} >
-          +£234 
           <Badge colorPalette="green">
-          <IoArrowUp />
+          <FormatNumber value={935.4} style="currency" currency="GBP" />
+          </Badge>
+          <Badge colorPalette="green">
+          <IoArrowUp/>
             20%
           </Badge>
         </DataList.ItemValue>
@@ -39,11 +41,21 @@ const CoinStatsSeparated = () => {
   )
 }
 
-
+const handleClick = () => {
+  console.log("clicked")
+}
 
 const DataTile = () => {
   return (
-    <Card.Root>
+    <Card.Root 
+    as="button"
+    onClick={handleClick}
+    _hover={{ 
+      cursor: 'pointer',
+      transform: 'translateY(-2px)',
+      boxShadow: 'md'
+    }}
+    >
       <Card.Header px={3} pt={3}>
         <HStack gap={2}>
           <Badge colorPalette="grey" variant="solid">sov-1871-xhh</Badge>
@@ -54,9 +66,6 @@ const DataTile = () => {
       <Card.Body px= {3}> 
         <CoinStatsSeparated/>
       </Card.Body>
-      <Card.Footer px={3}>
-        <Button colorPalette="teal" size="2xs" variant="outline">Details</Button>
-      </Card.Footer>
     </Card.Root>
   )
 }
