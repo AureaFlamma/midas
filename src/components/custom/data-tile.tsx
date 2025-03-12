@@ -45,6 +45,8 @@ const handleClick = () => {
   console.log("clicked")
 }
 
+// ToDo: Add a details screen
+
 const DataTile = () => {
   return (
     <Card.Root 
