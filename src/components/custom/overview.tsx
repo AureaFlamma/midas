@@ -1,9 +1,10 @@
-import { Badge, Box, DataList, HStack, IconButton, StackSeparator } from "@chakra-ui/react";
+import { Badge, Box, Button, CloseButton, DataList, HStack, IconButton, Portal, StackSeparator } from "@chakra-ui/react";
 import { Card } from "@chakra-ui/react";
 import { RiFullscreenFill } from "react-icons/ri";
 import { Stat } from "@chakra-ui/react";
 import { SimpleGrid } from "@chakra-ui/react";
 import { IoArrowUp } from "react-icons/io5";
+import { Dialog } from "@chakra-ui/react"
 
 const OverviewSmall = () => {
   return (
@@ -88,57 +89,36 @@ const OverviewSmall = () => {
     </Card.Root>
   );
 };
+// <?> <Portal>? <dialog.Positioner>? <dialog.Backdrop>?
+const OverViewBig = () => {
+  return (
+    <Dialog.Root size="cover" placement="center" motionPreset="slide-in-bottom">
+      <Dialog.Trigger>
+        {/* <Button variant="outline" size="sm">
+          Open Dialog
+        </Button> */}
+        <OverviewSmall/>
+      </Dialog.Trigger>
+      <Portal>
+        <Dialog.Backdrop />
+        <Dialog.Positioner>
+          <Dialog.Content>
+            <Dialog.Header>
+              <Dialog.Title>Dialog Title</Dialog.Title>
+              <Dialog.CloseTrigger asChild>
+                <CloseButton size="sm" />
+              </Dialog.CloseTrigger>
+            </Dialog.Header>
+            <Dialog.Body>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Dialog.Body>
+          </Dialog.Content>
+        </Dialog.Positioner>
+      </Portal>
+    </Dialog.Root>
+  )
 
-export default OverviewSmall;
+}
 
-/* <SimpleGrid columns={2} gap={5}>
-  <Box>
-    <DataList.Root size="sm">
-      <DataList.ItemLabel>
-        Total weight
-      </DataList.ItemLabel>
-      <DataList.ItemValue>200g</DataList.ItemValue>
-      <DataList.ItemLabel>
-        Total weight
-      </DataList.ItemLabel>
-      <DataList.ItemValue>200g</DataList.ItemValue>
-    </DataList.Root>
-  </Box>
-  <Box>
-    <DataList.Root>
-      <DataList.ItemLabel>
-        Total weight
-      </DataList.ItemLabel>
-      <DataList.ItemValue>200g</DataList.ItemValue>
-    </DataList.Root>
-  </Box>
-</SimpleGrid> */
-
-/* <HStack separator={<StackSeparator />}>
-  <HStack>
-    <Stat.Root>
-      <Stat.Label>
-        Total weight
-      </Stat.Label>
-      <Stat.ValueText>200g</Stat.ValueText>
-    </Stat.Root>
-    <Stat.Root>
-      <Stat.Label>
-        Gold price
-      </Stat.Label>
-      <Stat.ValueText>
-        £1600
-      </Stat.ValueText>
-      <Badge colorPalette="red" variant="plain" px="0">
-        <Stat.DownIndicator />
-        1.9%
-      </Badge>
-    </Stat.Root>
-  </HStack>
-  <HStack>
-    <Stat.Root>
-      <Stat.Label>Unique visitors</Stat.Label>
-      <Stat.ValueText>192.1k</Stat.ValueText>
-    </Stat.Root>
-  </HStack>
-</HStack> */
+export default OverViewBig;
