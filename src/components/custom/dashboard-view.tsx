@@ -4,22 +4,7 @@ import { IoArrowUp } from "react-icons/io5";
 import { CgMinimize } from "react-icons/cg";
 
 
-
-const Dashboard = () => {
-  return (
-    <VStack w="100%" h="100vh" bg="red">
-      <Heading size="3xl">Overview</Heading>
-    <SimpleGrid columns={6} gap="20px" width="100%" height="100%" mt={10}>
-      <DecorativeBox height="20" />
-      <DecorativeBox height="20" />
-
-    </SimpleGrid>
-    </VStack>
-  );
-}
-
-
-const Dashboard1 = () => {
+const Dashboard = ({ onClick }: { onClick: () => void }) => {
   return (
     <VStack w="100%" h="100vh">
       <Heading size="3xl">Overview</Heading>
@@ -151,40 +136,41 @@ const Dashboard1 = () => {
         <DecorativeBox>12</DecorativeBox>
       </GridItem>
       </Grid>
-      <IconButton 
-  aria-label="Search database"
-  position="fixed"
-  bottom="5"
-  left="50%"
-  transform="translateX(-50%)"
-  variant="surface"
-  colorPalette={"teal"}
-  overflow="hidden" // Important for containing the shimmer effect
-  css={{
-    '&::before': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      left: '-100%',
-      width: '100%',
-      height: '100%',
-      background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
-      transition: 'all 0.7s ease',
-      zIndex: 1,
-    },
-    '&:hover': {
-      cursor: 'pointer',
-      boxShadow: 'md',
-      transform: 'translateX(-50%) scale(1.02)',
-      '&::before': {
-        left: '100%',
-      }
-    }
-  }}
->
-  <CgMinimize />
-</IconButton>
+      <IconButton
+        onClick={onClick} 
+        aria-label="Search database"
+        position="fixed"
+        bottom="5"
+        left="50%"
+        transform="translateX(-50%)"
+        variant="surface"
+        colorPalette={"teal"}
+        overflow="hidden" // Important for containing the shimmer effect
+        css={{
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: '-100%',
+            width: '100%',
+            height: '100%',
+            background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
+            transition: 'all 0.7s ease',
+            zIndex: 1,
+          },
+          '&:hover': {
+            cursor: 'pointer',
+            boxShadow: 'md',
+            transform: 'translateX(-50%) scale(1.02)',
+            '&::before': {
+              left: '100%',
+            }
+          }
+        }}
+      >
+        <CgMinimize />
+      </IconButton>
     </VStack>
   );
 }
-export default Dashboard1;
+export default Dashboard;
