@@ -19,7 +19,7 @@ const SideRibbon = () => {
   return (
   <Box h="100vh" p="2" color="white" borderRight="1px solid #7D7D7D">
   <VStack >
-    <DialogRoot key="x" size="xl" placement="center">
+    <DialogRoot key="x" size="xl" placement="center" >
       <DialogTrigger>
         <Button colorPalette="teal" rounded="full" h="40px" w="40px"> 
           <PiCoinVerticalBold />

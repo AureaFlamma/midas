@@ -3,6 +3,7 @@ import { Badge } from "@chakra-ui/react"
 import { FormatNumber, Stat } from "@chakra-ui/react"
 import { DataList } from "@chakra-ui/react"
 import { IoArrowUp } from "react-icons/io5";
+import EditDataTile from "./edit-data-tile";
 
 
 
@@ -72,4 +73,8 @@ const DataTile = () => {
   )
 }
 
-export default DataTile
+const DataTileWithEdit = () => {
+  return EditDataTile({ dialogTrigger: <DataTile/>})
+}
+
+export default DataTileWithEdit;

@@ -1,5 +1,6 @@
 import { Flex } from "@chakra-ui/react"
-import DataTile from "./data-tile"
+import DataTileWithEdit from "./data-tile"
+import EditDataTile from "./edit-data-tile"
 
 const TileArea = () => {
   const data = [
@@ -18,7 +19,7 @@ const TileArea = () => {
   return (
       <Flex p={4} w="100%" h="100%" wrap="wrap" placeSelf={"start"} m={5} gap={5}>
         {data.map((d, i) => (
-          <DataTile key={i}/>
+          <DataTileWithEdit key={i}/>
         ))}
       </Flex>
 
