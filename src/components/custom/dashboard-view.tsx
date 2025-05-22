@@ -1,4 +1,4 @@
-import { AbsoluteCenter, Badge, Box, Center, CloseButton, DataList, FormatNumber, Grid, GridItem, Heading, HStack, IconButton, SimpleGrid, Square, Stat, VStack } from "@chakra-ui/react";
+import { Badge, Box, Center, DataList, FormatNumber, Grid, GridItem, Heading, HStack, IconButton, Stat, VStack } from "@chakra-ui/react";
 import { DecorativeBox } from "./decorative-box";
 import { IoArrowUp } from "react-icons/io5";
 import { CgMinimize } from "react-icons/cg";

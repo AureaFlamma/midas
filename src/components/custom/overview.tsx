@@ -52,7 +52,7 @@ const OverviewSmall = ({ onClick }: { onClick: () => void }) => {
         </HStack>
       </Card.Header>
       <Card.Body>
-        <DataList.Root size="xs" orientation="horizontal" gap={2}>
+        <DataList.Root size="sm" orientation="horizontal" gap={2}>
           <HStack>
             <DataList.ItemLabel>Gold spot price</DataList.ItemLabel>
             <DataList.ItemValue gap={2}>

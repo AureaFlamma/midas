@@ -1,22 +1,6 @@
-import { Button, Card, HStack, Icon, StackSeparator } from "@chakra-ui/react"
-import { Badge } from "@chakra-ui/react"
-import { FormatNumber, Stat } from "@chakra-ui/react"
-import { DataList } from "@chakra-ui/react"
+import { Badge, Card, DataList, FormatNumber, HStack } from "@chakra-ui/react";
 import { IoArrowUp } from "react-icons/io5";
 import EditDataTile from "./edit-data-tile";
-
-
-
-const SpotValueStat = () => {
-  return (
-    <Stat.Root>
-    <Stat.Label>Spot value</Stat.Label>
-    <Stat.ValueText>
-      <FormatNumber value={450} style="currency" currency="GBP" />
-    </Stat.ValueText>
-  </Stat.Root>
-  )
-}
 
 // ToDo: might change the last one into a Stat component for emphasis
 const CoinStatsSeparated = () => {
