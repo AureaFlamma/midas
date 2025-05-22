@@ -1,19 +1,17 @@
-import { Box, Button, HStack, Stack, VStack } from "@chakra-ui/react"
 import {
   DialogBody,
-  DialogCloseTrigger,
   DialogContent,
-  DialogFooter,
   DialogHeader,
   DialogRoot,
   DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+  DialogTrigger
+} from "@/components/ui/dialog";
+import { Box, Button, HStack, Stack, VStack } from "@chakra-ui/react";
 import { PiCoinVerticalBold } from "react-icons/pi";
-import PriceInput from "./price-input";
 import CoinTypeInput from "./coin-type-input";
-import YearInput from "./year-input";
 import DateInput from "./date-input";
+import PriceInput from "./price-input";
+import YearInput from "./year-input";
 
 const SideRibbon = () => {
   return (
