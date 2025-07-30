@@ -7,9 +7,7 @@ import {
   SelectValueText,
 } from "@/components/ui/select"
 import { Field } from "@/components/ui/field"
-
-
-// ToDo: Remove helpertext and find a way to align it without this hack
+import coinTypes from "@/mock-backend/coin-types"
 
 const CoinTypeInput = () => {
 
@@ -35,7 +33,6 @@ const CoinTypeInput = () => {
         </Field>
         </HStack>
       </Fieldset.Content>
-      
     </Fieldset.Root>
   )
 }

@@ -8,10 +8,10 @@ import {
   DialogTrigger
 } from "@/components/ui/dialog";
 import { Button, CloseButton, VStack } from "@chakra-ui/react";
-import CoinTypeInput from "./coin-type-input";
-import DateInput from "./date-input";
-import PriceInput from "./price-input";
-import YearInput from "./year-input";
+import CoinTypeInput from "./form/coin-type-input";
+import DateInput from "./form/date-input";
+import PriceInput from "./form/price-input";
+import YearInput from "./form/year-input";
 
 // ToDo: Layout of the dialog
 const EditDataTile = ({ dialogTrigger }: { dialogTrigger: React.ReactNode }) => {

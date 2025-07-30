@@ -8,10 +8,10 @@ import {
 } from "@/components/ui/dialog";
 import { Box, Button, HStack, Stack, VStack } from "@chakra-ui/react";
 import { PiCoinVerticalBold } from "react-icons/pi";
-import CoinTypeInput from "./coin-type-input";
-import DateInput from "./date-input";
-import PriceInput from "./price-input";
-import YearInput from "./year-input";
+import CoinTypeInput from "./form/coin-type-input";
+import DateInput from "./form/date-input";
+import PriceInput from "./form/price-input";
+import YearInput from "./form/year-input";
 
 const SideRibbon = () => {
   return (
