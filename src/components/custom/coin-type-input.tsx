@@ -1,6 +1,4 @@
 import { Fieldset, HStack } from "@chakra-ui/react"
-import { createListCollection } from "@chakra-ui/react"
-
 import {
   SelectContent,
   SelectItem,
@@ -14,14 +12,7 @@ import { Field } from "@/components/ui/field"
 // ToDo: Remove helpertext and find a way to align it without this hack
 
 const CoinTypeInput = () => {
-  // TODO: Abstract
-  const coinTypes = createListCollection({
-    items: [
-      { label: "Britannia", value: "britannia" },
-      { label: "Sovereign", value: "sovereign" },
-      { label: "Half sovereign", value: "half-sovereign" },
-    ],
-  })
+
   return (
     <Fieldset.Root>
       <Fieldset.Content>
