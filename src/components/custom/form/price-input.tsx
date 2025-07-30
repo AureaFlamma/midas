@@ -14,13 +14,12 @@ const defaultValues: IPriceInputProps = {
   currency: SupportedCurrency.GBP,
   helperText: 'Enter the amount you paid for the coin',
   label: 'Purchase price'
-
 }
 
 const PriceInput = ({defaultPrice, currency, helperText, label} :IPriceInputProps) => {
   return (
     <Field.Root>
-      <Field.Label>{label || defaultValues.label}</Field.Label>
+      <Field.Label>{label || defaultValues.label}</Field.Label> {/*TODO: Use same syntax as in CoinInputType*/}
         <NumberInputRoot 
           defaultValue={defaultPrice?.toString() || defaultValues.toString()}
           width="200px"

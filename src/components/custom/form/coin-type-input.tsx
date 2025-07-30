@@ -9,28 +9,36 @@ import {
 import { Field } from "@/components/ui/field"
 import coinTypes from "@/mock-backend/coin-types"
 
-const CoinTypeInput = () => {
+export interface ICoinTypeInput {
+  helperText?: string;
+  label?: string;
+}
+
+export const defaultValues: ICoinTypeInput = {
+  helperText: "Select the type of coin you are adding",
+  label: "Coin Type",
+}
+
+const CoinTypeInput = ({ helperText, label }: ICoinTypeInput) => {
 
   return (
     <Fieldset.Root>
       <Fieldset.Content>
         <HStack>
-        <Field label="Coin Type" helperText="Select the type of coin you are adding">
-        <SelectRoot collection={coinTypes} w="200px">
-            <SelectTrigger>
-              <SelectValueText />
-            </SelectTrigger>
-            <SelectContent zIndex="popover">
-              {
-                coinTypes.items.map((item) => (
+          <Field label={label || defaultValues.label} helperText={helperText || defaultValues.helperText}>
+            <SelectRoot collection={coinTypes} w="200px">
+              <SelectTrigger>
+                <SelectValueText />
+              </SelectTrigger>
+              <SelectContent zIndex="popover">
+                {coinTypes.items.map((item) => (
                   <SelectItem key={item.value} item={item}>
                     {item.label}
                   </SelectItem>
-                ))
-              }
-            </SelectContent>
-          </SelectRoot>
-        </Field>
+                ))}
+              </SelectContent>
+            </SelectRoot>
+          </Field>
         </HStack>
       </Fieldset.Content>
     </Fieldset.Root>
