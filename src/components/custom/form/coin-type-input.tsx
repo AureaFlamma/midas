@@ -8,24 +8,15 @@ import {
 } from "@/components/ui/select"
 import { Field } from "@/components/ui/field"
 import coinTypes from "@/mock-backend/coin-types"
+import { coinTypeInputCopy as copy} from "@/copy/componentsCopy"
 
-export interface ICoinTypeInput {
-  helperText?: string;
-  label?: string;
-}
-
-export const defaultValues: ICoinTypeInput = {
-  helperText: "Select the type of coin you are adding",
-  label: "Coin Type",
-}
-
-const CoinTypeInput = ({ helperText, label }: ICoinTypeInput) => {
+const CoinTypeInput = () => {
 
   return (
     <Fieldset.Root>
       <Fieldset.Content>
         <HStack>
-          <Field label={label || defaultValues.label} helperText={helperText || defaultValues.helperText}>
+          <Field label={copy.label} helperText={copy.helperText}>
             <SelectRoot collection={coinTypes} w="200px">
               <SelectTrigger>
                 <SelectValueText />

@@ -1,23 +1,22 @@
 import { NumberInputField, NumberInputRoot } from "@/components/ui/number-input"
 import { Field } from "@chakra-ui/react"
-import { yearInputData } from "@/copy/components"
+import { yearInputCopy as copy} from "@/copy/componentsCopy"
 
 // ToDo: find a way to hide the stepper
 // TODO: Difference between field and fieldset for all 4 components.
 const YearInput = () => {
   return (
     <Field.Root>
-      <Field.Label>{yearInputData.label}</Field.Label>
+      <Field.Label>{copy.label}</Field.Label>
         <NumberInputRoot 
-          defaultValue={yearInputData.defaultValue?.toString()}
+          defaultValue={copy.defaultValue?.toString()}
           width="200px"
           min={1700}
           max={new Date().getFullYear()}
         >
-          <NumberInputField 
-          />
+          <NumberInputField />
         </NumberInputRoot>
-      <Field.HelperText>{yearInputData.helperText}</Field.HelperText>
+      <Field.HelperText>{copy.helperText}</Field.HelperText>
     </Field.Root>
   )
 }

@@ -5,3 +5,8 @@ export interface IYearInput {
   label?: string;
   helperText?: string;
 }
+
+export interface ICoinTypeInput {
+  helperText?: string;
+  label?: string;
+}
